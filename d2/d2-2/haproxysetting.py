@@ -60,7 +60,6 @@ def add(add_content):
         webadd_title, server_title, web = init[0], init[1], init[2]
         server_content = "server {server} {server} weight {weight} maxconn {max}".format(
             server=server_title['server'], weight=server_title['weight'], max=server_title['maxconn'])
-        print(web,'web')
         if web:
             web_list = []
             for i in web:
@@ -81,19 +80,15 @@ def add(add_content):
                     if flag and line.strip():
                         line_list = line.split()
                         if line_list[1] == server_title['server']:
-                            print(web_list,'list')
                             if ai and bi:
                                 new_str = line.replace(line, "%s%s\n" % (' '*8, server_content))
                                 write_file.write(new_str)
 
-                                print('aaaa')
                                 ai = False
                         else:
-                            print('bbbb')
                             write_file.write(line)
                             if bi and ai:
                                 write_file.write("%s%s\n" %(' '*8, server_content))
-                                print('cccc')
                                 bi = False
                     else:
                         write_file.write(line)
