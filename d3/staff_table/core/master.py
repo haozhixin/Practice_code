@@ -1,6 +1,7 @@
 #_*_coding:utf-8_*_
 import json
 import os, sys
+import time
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -106,13 +107,34 @@ def search1(*args):
 
 # 增加
 def add(*args):
+    '''
+    add 1 zhixin 23 130427102300 IT 
+    :param args:
+    :return:
+    '''
+    local_time = time.strftime("%Y-%m-%d")
+    data_dic = {
+        "staff_id": int(),
+        "name": "",
+        "age": int(),
+        "phone": int(),
+        "dept": "",
+        "enroll_date": ""
+    }
     data = content_file('db')
     phone_list = [x['phone'] for x in data]
-    print(phone_list)
+    max_id = max([x['staff_id'] for x in data])
+    print(args)
+    # if args not in phone_list:
+    #     data.append()
+
+
 
 if __name__ == '__main__':
     while True:
-        enter = input("(staff)>>> ").strip().split()
+        # enter = input("(staff)>>> ").strip().split()
+        enter = raw_input("(staff)>>> ").split()
+        print(enter[0])
         if enter:
             if enter[0] == 'exit':
                 exit()
@@ -120,7 +142,7 @@ if __name__ == '__main__':
                 message = search1(enter)
                 # if enter[4] and enter[4] == 'where':
             elif enter[0] == 'add':
-                add('aa')
+                add(enter)
 
 
             #elif enter[6] == 'like':
