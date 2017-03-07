@@ -108,7 +108,7 @@ def search1(*args):
 # 增加
 def add(*args):
     '''
-    add 1 zhixin 23 130427102300 IT 
+    add zhixin 23 130427102300 IT
     :param args:
     :return:
     '''
@@ -124,23 +124,32 @@ def add(*args):
     data = content_file('db')
     phone_list = [x['phone'] for x in data]
     max_id = max([x['staff_id'] for x in data])
-    print(args)
-    # if args not in phone_list:
-    #     data.append()
-
+    enter_list = args[0][1:]
+    try:
+        if len(enter_list) == 4:
+            print(enter_list)
+            if args not in phone_list:
+                data_dic['staff_id'] = int(max_id+1)
+                data_dic['name'] = str(enter_list[0])
+                data_dic['age'] = int(enter_list[1])
+                data_dic['phone'] = int(enter_list[2])
+                data_dic['dept'] = str(enter_list[3])
+                data_dic['enroll_date'] = local_time
+                data.append(data_dic)
+        print(data)
+    except Exception as e:
+        print(e)
 
 
 if __name__ == '__main__':
     while True:
-        # enter = input("(staff)>>> ").strip().split()
-        enter = raw_input("(staff)>>> ").split()
-        print(enter[0])
+        enter = input("(staff)>>> ").strip().split()
+        # enter = raw_input("(staff)>>> ").split()
         if enter:
             if enter[0] == 'exit':
                 exit()
             elif enter[0] == 'select' and enter[2] == 'from':
                 message = search1(enter)
-                # if enter[4] and enter[4] == 'where':
             elif enter[0] == 'add':
                 add(enter)
 
