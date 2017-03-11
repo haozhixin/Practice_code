@@ -1,7 +1,0 @@
-{
-"xiaoli": {"id":"1","age": 22 , "phone":"1234567", "dept": "IT", "enroll_date":"2013-01-02"},
-"xiaoa": {"id":"2","age": 32 , "phone":"1334567", "dept": "HR", "enroll_date":"2014-09-02"},
-"xiaob": {"id":"3","age": 52 , "phone":"1534567", "dept": "CEO", "enroll_date":"2011-02-02"},
-"xiaoc": {"id":"4","age": 10 , "phone":"1034567", "dept": "OP", "enroll_date":"2016-05-02"},
-"xiaod": {"id":"5","age": 44 , "phone":"1634567", "dept": "QA", "enroll_date":"2012-01-02"}
-}

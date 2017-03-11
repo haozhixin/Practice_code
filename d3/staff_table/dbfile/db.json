@@ -1,6 +1,1 @@
-[
-  {"staff_id": 1, "name": "Alex Li", "age": "22", "phone": 129237284, "dept": "IT", "enroll_date": "2013-01-01"},
-  {"staff_id": 4, "name": "Alex Li1", "age": "22", "phone": 1239237284, "dept": "IrT", "enroll_date": "2013-01-01"},
-  {"staff_id": 2, "name": "Jack Wang", "age": "30", "phone": 1392878492, "dept": "HR", "enroll_date": "2015-01-01"},
-  {"staff_id": 3, "name": "Rain liu", "age": "23", "phone": 1628568492, "dept": "Sales", "enroll_date": "2015-09-23"}
-]
+[{"dept": "IT", "name": "Alex Li", "staff_id": 1, "enroll_date": "2013-01-01", "phone": 129237284, "age": "22"}, {"dept": "IrT", "name": "Alex Li1", "staff_id": 4, "enroll_date": "2013-01-01", "phone": 1239237284, "age": "22"}, {"dept": "Sales", "name": "Rain liu", "staff_id": 3, "enroll_date": "2015-09-23", "phone": 1628568492, "age": "23"}, {"dept": "HR", "name": "test", "staff_id": 5, "enroll_date": "2017-03-11", "phone": 989898432, "age": 44}]
