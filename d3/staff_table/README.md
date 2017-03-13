@@ -29,7 +29,8 @@ dbfile 目录
 > 例如： add xiaoli 22 1321231213 IT
 
 - 删 
-  > del id
+
+> del id
 
 > 例如： del 1
 
