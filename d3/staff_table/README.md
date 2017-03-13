@@ -1,10 +1,10 @@
 ### 员工信息表查询
-程序介绍:;
-bin  # 程序运行入口
-dbfile #存放数据文件
-core   #主逻辑
-数据文件为json格式
-[
+程序介绍:
+  bin  # 程序运行入口
+  dbfile #存放数据文件
+  core   #主逻辑
+  数据文件为json格式
+    [
   {"staff_id": 1, "name": "Alex Li", "age": "22", "phone": 129237284, "dept": "IT", "enroll_date": "2013-01-01"}
   ]
 
